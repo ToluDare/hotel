@@ -1,5 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
 h1 {
-    color: blueviolet;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    min-height: 100%;
 }
 
 .Quick-navigation {
@@ -23,4 +53,128 @@ h1 {
 .Quick-navigation-item:hover,
 .Quick-navigation-item.current {
     color: #fff;
+}
+
+#A {
+    background-color: #FFC300;
+}
+
+#B {
+    background-color: #FFB700;
+    height: 600px;
+}
+
+#C {
+    background-color: #FFA200;
+}
+
+#D {
+    background-color: #FF9500;
+    #FF9500 height: 200px;
+}
+
+#Sales {
+    background-color: #FFAA00;
+    height: 200px;
+}
+
+#E {
+    background-color: #FF8800;
+}
+
+#footer {
+    background-color: #ff7b00;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    padding: 0.5em;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s;
+    outline: none;
+}
+
+.Scroll-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Scroll-to-top:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* STRUCTURE */
+
+.wrapper {
+    padding: 5px;
+    max-width: 960px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column {
+    flex: 1;
+    margin: 2px;
+    padding: 10px;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .columns .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+        &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .columns .column {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+}
+
+#white_text {
+    color: #f4a48d;
+    font-size: medium;
+}
+
+.stay {
+    line-height: 26px;
+}
+
+.socials {
+    height: 2vh;
+    width: 2vw;
 }
