@@ -1,3 +1,26 @@
 h1 {
     color: blueviolet;
 }
+
+.Quick-navigation {
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.Quick-navigation-item {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s;
+    padding: 0.5em;
+    display: block;
+}
+
+.Quick-navigation-item:hover,
+.Quick-navigation-item.current {
+    color: #fff;
+}
